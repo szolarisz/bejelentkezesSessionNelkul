@@ -1,0 +1,20 @@
+h1{
+    font-family: Tangerine;
+}
+
+#header, #footer{
+    background-color: navy;
+    height: 55px;
+    color: azure;
+}
+
+#kozep{
+    border: 1px solid crimson;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.btn{
+    margin: 10px 0px;
+}

@@ -1,0 +1,35 @@
+<%- include("header") %>
+
+    <div id="body" class="container">
+        <div class="row">
+            <div id="bal" class="col-3">
+                <% if( miAHelyzet ) {%>
+                    <div class="alert alert-success" role="alert">
+                        Sikeres bejelentkezés
+                      </div>
+                <%} else {%>
+                    <div class="alert alert-danger" role="alert">
+                        Próbálkozz újra!
+                      </div>
+                <%}%>
+
+
+            </div>
+            <div id="kozep" class="col-6">
+                <form method="POST" action="/login">
+                    <div class="form-floating mb-3">
+                        <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input name="jelszo" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-file-earmark-person-fill"></i> Login</button>
+                </form>
+            </div>
+            <div id="jobb" class="col-3"></div>
+        </div>
+    </div>
+
+ <%- include('footer') %>
