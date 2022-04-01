@@ -8,14 +8,18 @@
    ->
  */
 
+ const uuid=require('uuid');  
+
 function addRoutes(app){
 
     const objRep = {
-        belepett : false, 
+        belepett : true, 
+        uuid
     }
 
-    app.post('/login',authMW(objRep),renderMW(objRep));
     app.get('/', renderMW(objRep));
+    app.post('/login',authMW(objRep),renderMW(objRep));
+    
  }  
 
  const renderMW=require('../middleware/render');

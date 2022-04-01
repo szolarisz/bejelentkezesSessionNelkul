@@ -4,7 +4,9 @@
  */
 
 module.exports = (objRep) =>{
-    //var {belepett,db} = objRep;
+    const {uuid} = objRep;
+    console.log(uuid.v4());
+    
     return (req, res, next) =>{
         res.locals.siker = false;
         console.log( req.body );

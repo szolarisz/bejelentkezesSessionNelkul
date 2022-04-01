@@ -3,6 +3,8 @@
  */
 
  module.exports = (objRepo) =>{
+     var {belepett} = objRepo;
+     console.log(belepett);
      return (req, res, next) =>{
          return res.render("index", { miAHelyzet :res.locals.siker});
      }
